@@ -1,0 +1,22 @@
+@font-face {
+    font-family: '나무';
+    src: url('../font/HYNAMM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '나무';
+    src: url('../font/HYNAML.woff') format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: '나무';
+    src: url('../font/HYNAMB.woff') format('woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

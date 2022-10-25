@@ -1,0 +1,651 @@
+/* 반응형 pager 크기 줄이기!!!!!! */
+.innerbox {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #F3F4F6;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.gnb,
+.hamnav,
+#container section {
+    font-family: 'NanumSquareRound';
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.innerbox>div>ul {
+    display: flex;
+}
+
+.gnb {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 0.93em;
+}
+
+.gnb>li {
+    margin-left: 20px;
+    color: #999999;
+}
+.gnb>li>a:hover{
+    color: darkslategrey;
+    font-weight: bold;
+}
+.gnb>li>a {
+    color: #999999;
+}
+/* ---------------------hambtn------------------ */
+
+.hamnav {
+    position: absolute;
+    top: 28px;
+    font-size: 1.2em;
+
+}
+
+.hamnav>li {
+    margin-right: 40px;
+}
+.hamnav>li>a:hover{
+    font-weight: bold;
+    color: darkslategrey;
+}
+.hamnav>li>a {
+    color: #444;
+}
+
+.sns {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+
+.sns>li {
+    margin-left: 20px;
+}
+
+.sns img {
+    width: 20px;
+}
+
+
+
+
+
+/* #mainbanner */
+
+#mainbanner{
+    position: relative;
+    overflow: hidden;
+    top: 50px;
+}
+.bannerwrap{
+    width: 300%;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: 0.5s;
+}
+.banner img{
+    width: 100%;
+}
+.banner>li{
+    width: 100%;
+    height: 100%;
+}
+.banner>.mobile{
+    display: none;
+}
+.arrowbtn>a{
+    position: absolute;
+    top: 30%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.arrowbtn img{
+    width: 70px;
+}
+.arrowbtn>.leftbtn{
+    margin-left: -40%;
+}
+.arrowbtn>.rightbtn{
+    margin-left: 40%;
+}
+
+/* 페이지 */
+.pager{
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 10px; 
+    /* column-gap 좌우, row-gap 상하 */
+}
+.pager>li>a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    text-align: center;
+}
+.pager>.active>a{
+    width: 20px;
+    height: 20px;
+    background: #0B3948;
+    color: white;
+    transition: 0.5s;
+}
+
+/* #container */
+
+
+#container h2 {
+    padding: 50px 0;
+    font-size: 2.33em;
+    text-align: center;
+}
+
+#container section {
+    position: relative;
+
+}
+.best h2{
+    margin: 50px 0;
+}
+
+.best .imgbox>img {
+    width: 100%;
+}
+
+
+.best .first {
+    width: 49%;
+}
+
+.best ul>li {
+    float: left;
+    width: 21%;
+    padding-bottom: 10px;
+    margin-left: 2%;
+    /* box-sizing: border-box; */
+}
+
+.first p {
+    font-size: 2em;
+    text-align: center;
+}
+
+.best .name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.more {
+    text-align: right;
+}
+
+.more>a {
+    display: inline-block;
+    font-size: 18px;
+    color: #999;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.hotdeal h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+    color: red;
+}
+.hotdeal>div{
+    width: 100%;
+}
+
+.hotdeal .time {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hotdeal .imgbox>img {
+    width: 100%;
+
+}
+
+.hotdeal .hotmenu>ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hotdeal .hotmenu li {
+    width: 23%;
+}
+
+.hotdeal .textbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 50px 0;
+}
+
+.hotdeal .listTitle {
+    font-weight: 600;
+}
+
+.hotdeal .title {
+    text-align: right;
+}
+.discount {
+    background-color: navy;
+    border: 1px solid navy;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.discount2 {
+    background-color: #0B3948;
+    border: 1px solid #0B3948;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.hotdeal .title {
+    font-size: 20px;
+}
+
+.centerBanner {
+    font-family: 'NanumSquareRound';
+    background-image: url(../images/centerbanner.jpg);
+    background-position: center;
+    background-size: contain;
+    padding: 300px;
+    margin: 250px 0;
+    text-align: center;
+    color: #ddd;
+}
+
+.centerBanner strong {
+    display: block;
+    font-weight: 700;
+    font-size: 3em;
+    color: #eee;
+    margin-bottom: 30px;
+}
+.centerBanner>div{
+    padding: 50px 0;
+}
+.centerBanner>div>span {
+    line-height: 60px;
+    font-size: 1.5em;
+}
+
+
+.review {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'NanumSquareRound';
+}
+
+.review ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.review>ul>li {
+    text-align: center;
+    font-size: 18px;
+    width: 31%;
+    /* margin-left: 30px; */
+}
+
+.review .textbox {
+    background-color: rgba(0, 0, 0, 0.04);
+    /* border-radius: 0 0 40px 40px; */
+}
+
+.review p {
+    padding: 15px 30px;
+}
+
+.review img {
+    width: 100%;
+    /* border-radius: 40px 40px 0 0; */
+}
+
+/* footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 200px;
+}
+
+footer>.innerbox {
+    display: flex;
+}
+
+.notice {
+    margin-right: 100px;
+    line-height: 25px;
+}
+
+.notice>div {
+    padding-bottom: 20px;
+}
+
+.footmid {
+    line-height: 25px
+}
+
+.notice span {
+    display: block;
+}
+
+footer{
+    font-family: 'NanumSquareRound';
+}
+.footsns {
+    position: absolute;
+    right: 0;
+}
+
+.footsns img {
+    width: 25px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width:1170px) {
+
+    /* hambtn */
+    .menuwrap{
+        display: block;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
+        /* position이 들어갔기 때문에 transform으로 이동 */
+        transition: 0.3s;
+    }
+    .activemenu{
+        transform: translateX(0);
+    }
+    .pager{
+        bottom: 5%;
+
+    }
+    .menuwrap>.hamnav{
+        width: 70%;
+        display: block;
+        background: white;
+        line-height: 4;
+        text-indent: 20px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .hamnav{
+        top: 0;
+    }
+    .hamnav>li:first-child{
+        padding-top: 50px;
+    }
+    .hamnav>li{
+        border-bottom: #eee solid 1px;
+        margin-right: 0;
+    }
+    
+    .hamclose{
+        position: fixed;
+        z-index: 101;
+        display: block;
+        left: 10px;
+        top: 10px;
+    }
+    .hamclose>a{
+        display: block;
+        width: 45px;
+        height: 48px;
+        background-image: url(../images/ham.png);
+    }
+    .hamclose>.on{
+        background-image: url(../images/close.png);
+    }
+    .arrowbtn img{
+        display: none;
+    }
+    .centerBanner>div>span{
+        font-size: 1.2em;
+    }
+
+
+    .best .first {
+        width: 49%;
+    }
+
+    .best ul>li {
+        float: left;
+        width: 20.2%;
+        padding-bottom: 10px;
+        margin-left: 2.5%;
+        /* box-sizing: border-box; */
+    }
+    .centerBanner {
+        padding: 200px 0;
+    }
+    .centerBanner>div>span {
+        line-height: 50px;
+    }
+    .centerBanner>div{
+        padding: 50px 40px;
+    }
+
+    .review {
+        /* 댓글창 크기 일정하게 맞추는법 */
+        max-width: 100%;
+    }
+
+
+
+
+}
+@media screen and (max-width:850px){
+.centerBanner{
+    display: none;
+}
+}
+@media screen and (max-width:767px) {
+    body{
+        font-size:13px;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .best .first {
+        width: 49%;
+    }
+
+
+    .first p {
+        font-weight: bold;
+    }
+
+    .best .name {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .more>a {
+        display: inline-block;
+        font-size: 14px;
+        color: #999;
+        padding: 5px 20px;
+    }
+
+    .hotdeal li {
+        position: relative;
+    }
+
+    .hotdeal .title {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .hotdeal .discount,
+    .discount2 {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        padding: 3px 4px;
+        border-radius: 1px;
+        background-color: navy;
+    }
+    .centerBanner>div>span{
+        line-height: 2;
+    }
+
+    .review>ul>li {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .review>ul>li>a {
+        display: block;
+        width: 45%;
+    }
+
+    .review .textbox {
+        width: 55%;
+    }
+
+    footer .innerbox {
+        display: block;
+        text-align: center;
+    }
+
+    .notice {
+        margin: 0;
+        /* display: flex; */
+        justify-content: center;
+        border-bottom: 1px solid white;
+        margin-bottom: 15px;
+    }
+.notice span{
+    display: inline;
+}
+    .footsns {
+        top: -40px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+
+}
+
+@media screen and (max-width:580px) {
+   
+    .review>ul>li {
+        display: block;
+    }
+
+    .review>ul>li>a {
+        width: 100%;
+    }
+
+    .review .textbox {
+        width: 100%;
+    }
+    .pager>li>a{
+       width: 10px;
+        height: 10px;
+    }
+    .pager>.active>a{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    body{
+        font-size:12px;
+    }
+
+    .logo img {
+        width: 70%;
+        right: 0;
+    }
+    .hamclose{
+        top: 5px;
+        left: 5px;
+    }
+    .hambtn img{
+        width: 20px;
+    }
+
+    header>.innerbox>div:nth-child(2) {
+        display: none;
+    }
+
+    .best h2{
+        margin: 0;
+    }
+
+    .best ul {
+        flex-wrap: wrap;
+    }
+
+    .best ul>li {
+        width: 47%;
+        margin-left: 2%;
+    }
+
+    .best .first {
+        width: 96%;
+    }
+    .centerBanner{
+        display: none;
+    }
+    #container h2 {
+        margin-top: 50px;
+    }
+
+    .hotdeal .hotmenu>ul {
+        /* width: 200%; */
+        flex-wrap: wrap;
+    }
+
+    .hotdeal .hotmenu li {
+        width: 49%;
+    }
+}

@@ -1,0 +1,442 @@
+.innerbox {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header */
+header {
+    background-color: #F3F4F6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.innerbox>div>ul {
+    display: flex;
+}
+
+.gnb {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 0.93em;
+}
+
+.gnb>li {
+    margin-left: 20px;
+    color: #999999;
+}
+
+.gnb>li>a:hover {
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+.gnb>li>a {
+    color: #999999;
+}
+
+.menuwrap {
+    position: absolute;
+    top: 28px;
+    font-size: 1.2em;
+}
+
+.menuwrap>ul {
+    display: flex;
+}
+
+.menuwrap li {
+    margin-right: 40px;
+}
+
+.menuwrap a:hover {
+    /* font-weight: bold; */
+    color: blue;
+}
+
+.menuwrap a {
+    color: #444;
+}
+
+.sns {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+
+.sns>li {
+    margin-left: 20px;
+}
+
+.sns img {
+    width: 20px;
+}
+.innerbox>div>a{
+    display: none;
+}
+
+.hambtn {
+    display: none;
+}
+
+/* bastseller */
+.bestseller {
+    text-align: center;
+}
+
+.bestseller li {
+    position: relative;
+}
+
+.bestseller>h2 {
+    font-size: 2.33em;
+    margin: 100px;
+}
+
+.bestseller>ul {
+    display: flex;
+}
+
+.bestseller img {
+    width: 90%;
+}
+
+.bestseller .name {
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+
+.listTitle {
+    color: #666;
+}
+
+.bestseller .number {
+    position: absolute;
+    background-color: slategray;
+    color: white;
+    padding: 5px 17px;
+    font-size: 2em;
+    font-weight: bold;
+    top: 0;
+    left: 5%;
+}
+
+/* list */
+.list>ul {
+    display: flex;
+}
+
+.list>.menu {
+    padding: 100px 0 3px 0;
+    font-size: 0.9em;
+    border-bottom: 1.5px solid #777;
+}
+
+.list>.menu>li {
+    margin-right: 20px;
+}
+
+.list>.menu a {
+    color: #777;
+}
+
+.item {
+    margin-top: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item>li {
+    margin-bottom: 50px;
+    width: calc(100% / 4.5);
+}
+
+.item .name {
+    padding: 5px 0 5px;
+
+}
+
+.item p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.listTitle {
+    font-size: 0.8em;
+}
+
+.item img {
+    width: 100%;
+}
+
+.search {
+    position: relative;
+    left: 39%;
+    margin-top: 80px;
+}
+
+.search>input {
+    width: 20%;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.search>a>img {
+    width: 28px;
+}
+
+
+/* footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 150px;
+}
+
+footer>.innerbox {
+    display: flex;
+}
+
+.notice {
+    margin-right: 100px;
+    line-height: 25px;
+}
+
+.notice>div {
+    padding-bottom: 20px;
+}
+
+.footmid {
+    line-height: 25px
+}
+
+.notice span {
+    display: block;
+}
+
+.footsns {
+    position: absolute;
+    right: 0;
+}
+
+.footsns img {
+    width: 25px;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width:1170px) {
+    header>.innerbox>div {
+        height: 0;
+    }
+
+    /* hambtn */
+    .menuwrap {
+        display: block;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
+        /* position이 들어갔기 때문에 transform으로 이동 */
+        transition: 0.3s;
+    }
+
+    .activemenu {
+        transform: translateX(0);
+    }
+
+    .menuwrap>.hamnav {
+        width: 70%;
+        display: block;
+        background: white;
+        line-height: 4;
+        text-indent: 20px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .hamnav {
+        top: 0;
+    }
+
+    .hamnav>li:first-child {
+        padding-top: 50px;
+    }
+
+    .hamnav>li {
+        border-bottom: #eee solid 1px;
+        margin-right: 0;
+    }
+
+    .hamclose {
+        position: fixed;
+        z-index: 101;
+        display: block;
+        left: 10px;
+        top: 10px;
+    }
+
+    .hamclose>a {
+        display: block;
+        width: 45px;
+        height: 48px;
+        background-image: url(../images/ham.png);
+    }
+
+    .hamclose>.on {
+        background-image: url(../images/close.png);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .innerbox>div>ul {
+        display: none;
+    }
+    .innerbox>div>a{
+        position: absolute;
+        display: block;
+        top: 20px;
+    }
+    .innerbox>div>a>img{
+        width: 30px;
+    }
+    .topsearch{
+        right: 60px;
+    }
+    .dog{
+        right: 10px;
+    }
+
+
+    .item p {
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    footer .innerbox {
+        display: block;
+        text-align: center;
+    }
+
+    .notice {
+        margin: 0;
+        /* display: flex; */
+        justify-content: center;
+        border-bottom: 1px solid white;
+        margin-bottom: 15px;
+    }
+
+    .notice span {
+        display: inline;
+    }
+
+    .footsns {
+        top: -40px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@media screen and (max-width:580px) {
+    body {
+        font-size: 14px;
+    }
+
+    header .logo {
+        padding: 0;
+    }
+
+    .logo img {
+        width: 70%;
+    }
+
+    .hambtn {
+        display: block;
+        z-index: 100;
+        top: 20%;
+        left: 1%;
+    }
+    .hamclose{
+        top: 0;
+    }
+    .innerbox>div>a{
+        top: 13px;
+    }
+    .innerbox>div>a>img{
+        width: 25px;
+    }
+    .topsearch{
+        right: 40px;
+    }
+
+
+
+
+    .bestseller {
+        overflow: hidden;
+        font-size: 1.5em;
+    }
+
+    .bestseller>ul {
+        width: 300%;
+    }
+
+    .bestseller img {
+        width: 90%;
+    }
+
+    .item {
+        font-size: 1.2em;
+    }
+
+    .item>li {
+        margin-bottom: 50px;
+        width: calc(100% / 2.2);
+    }
+
+    .search {
+        left: 10%;
+        margin-top: 50px;
+    }
+
+    .search>input {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .innerbox>div>a{
+        top: 8px;
+    }
+    .hambtn {
+        top: 5%;
+        left: 1%;
+    }
+
+    .bestseller {
+        font-size: 1.2em;
+    }
+
+    .item {
+        font-size: 1.2em;
+    }
+}
