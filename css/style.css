@@ -207,10 +207,9 @@ header {
     padding: 5px 20px;
     border-radius: 20px;
 }
-
-.hotdeal h2 {
+.hotdeal>h2 {
     text-align: center;
-    margin-top: 20px;
+    margin: 150px 0;
     font-size: 35px;
     color: red;
 }
@@ -227,7 +226,6 @@ header {
     width: 100%;
 
 }
-
 .hotdeal .hotmenu>ul {
     display: flex;
     justify-content: space-evenly;
@@ -376,7 +374,9 @@ footer{
 }
 
 @media screen and (max-width:1170px) {
-
+    .clock{
+        display: none;
+    }
     /* hambtn */
     .menuwrap{
         display: block;
@@ -452,6 +452,9 @@ footer{
         padding-bottom: 10px;
         margin-left: 2.5%;
         /* box-sizing: border-box; */
+    }
+    .hotdeal>h2 {
+        margin: 50px 0;
     }
     .centerBanner {
         padding: 200px 0;
